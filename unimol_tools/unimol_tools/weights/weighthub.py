@@ -9,7 +9,7 @@ except:
     def snapshot_download(*args, **kwargs):
         raise ImportError('huggingface_hub is not installed. If weights are not avaliable, please install it by running: pip install huggingface_hub. Otherwise, please download the weights manually from https://huggingface.co/dptech/Uni-Mol-Models')
 
-WEIGHT_DIR = os.environ.get('UNIMOL_WEIGHT_DIR', os.path.dirname(os.path.abspath(__file__)))
+WEIGHT_DIR = os.environ.get('UNIMOL_WEIGHT_DIR', '/kaggle/input/toxcast_tox21/pytorch/default/1')
 
 if 'UNIMOL_WEIGHT_DIR' in os.environ:
     logger.warning(f'Using custom weight directory from UNIMOL_WEIGHT_DIR: {WEIGHT_DIR}')
